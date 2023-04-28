@@ -49,7 +49,7 @@ cprint: mov ah, 0x0f ; white on black for printing
     add di, bx ; add x offset
 
     mov ax, cx ; restore char/attribute
-    stosw      ; stores word from ax into destination operand es:di
+    stosw      ; stores word from ax into destination operand es:di(video memory)
     add byte [xpos], 1 ; advance right
 
     ret
